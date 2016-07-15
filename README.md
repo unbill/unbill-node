@@ -1,6 +1,6 @@
 # unbill-node
 
-A node.js client library for the [Unbill API](https://unbill.co/docs)
+A node.js client library for the [Unbill API](https://unbill.co/docs).
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ A node.js client library for the [Unbill API](https://unbill.co/docs)
       + [Payment](#payment)
       + [User](#user)
   * [Support](#support)
-  
+
 ## Getting started
 
 ```bash
@@ -34,32 +34,32 @@ var Unbill = require('unbill')(unbillKey)))
 }
 
 Unbill.auth({
-	userId: userId,
-	companyId: companyId,
-	form: {
-		username: 'username',
-		password: 'password'
-	}
+  userId: userId,
+  companyId: companyId,
+  form: {
+    username: 'username',
+    password: 'password'
+  }
 })
 .then(function (response) {
-	
-	if (response.status === 200) {
-		var billData = response.data
-		return billData
-	}
-	else if (response.status === 201) {
-		return Unbill.authStep({
-			token: response.data.token,
-			mfa: ['Secret Answer']
-		})
-		.then(function (response) {
-			// Repeat until 200 status is returned
-		})
-	}
-	
+
+  if (response.status === 200) {
+    var billData = response.data
+    return billData
+  }
+  else if (response.status === 201) {
+    return Unbill.authStep({
+      token: response.data.token,
+      mfa: ['Secret Answer']
+    })
+    .then(function (response) {
+      // Repeat until 200 status is returned
+    })
+  }
+
 })
 .catch(function (e) {
-	var errMessage = e.response.data.message
+  var errMessage = e.response.data.message
 ))
 ```
 
@@ -67,7 +67,7 @@ Unbill.auth({
 
 The module supports all Plaid API endpoints.  For complete information about the API, head over to the [docs](https://unbill.co/docs).
 
-Every function requires a `body` as specified by the [docs](https://unbill.co/docs).
+Every function requires a `payload` as specified by the [docs](https://unbill.co/docs).
 
 Each function returns a promise that can be used to access the response of the call.
 
@@ -75,43 +75,43 @@ Each function returns a promise that can be used to access the response of the c
 
 ```js
 // Auth
-Unbill.auth
+Unbill.auth(payload)
 // Auth step
-Unbill.authStep
+Unbill.authStep(payload)
 ```
 
 ### Bill
 ```js
 // Bill details
-Unbill.getBillDetails
+Unbill.getBillDetails(payload)
 // Bill list
-Unbill.getBills
+Unbill.getBills(payload)
 // Fix bill hold
-Unbill.fixBillHold
+Unbill.fixBillHold(payload)
 ```
 
 ### Company
 ```js
 // Get company
-Unbill.getCompany
+Unbill.getCompany(payload)
 // Search companies
-Unbill.searchCompanies
+Unbill.searchCompanies(payload)
 // Get company categories
-Unbill.getCompanyCategories
+Unbill.getCompanyCategories(payload)
 ```
 
 ### Payment
 ```js
 // Add payment method
-Unbill.addPaymentMethod
+Unbill.addPaymentMethod(payload)
 // Get payment method
-Unbill.getPaymentMethod
+Unbill.getPaymentMethod(payload)
 // Retry payment method
-Unbill.retryPaymentMethod
+Unbill.retryPaymentMethod(payload)
 // Update autopay
-Unbill.updateAutopay
+Unbill.updateAutopay(payload)
 // Make payment
-Unbill.makePayment
+Unbill.makePayment(payload)
 ```
 
 ### User
@@ -124,4 +124,3 @@ Unbill.createUser
 ## Support
 
 We’ve tried to make this documentation user-friendly and example-filled, but please [drop us a line](mailto:hello@unbill.us) with any questions.
-
