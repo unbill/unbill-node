@@ -1,0 +1,32 @@
+{
+  "name": "unbill",
+  "version": "1.0.0",
+  "description": "A node.js client for the Unbill API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unbill/unbill-node.git"
+  },
+  "keywords": [
+    "unbill",
+    "unbill.us",
+    "api",
+    "node"
+  ],
+  "author": "nerds@unbill.us",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unbill/unbill-node/issues"
+  },
+  "homepage": "https://github.com/unbill/unbill-node#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "axios": "^0.13.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
