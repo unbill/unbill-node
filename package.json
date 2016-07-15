@@ -16,7 +16,11 @@
     "api",
     "node"
   ],
-  "author": "nerds@unbill.us",
+  "author": {
+    "name": "Unbill",
+    "email": "nerds@unbill.us",
+    "url": "https://unbill.co/docs"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/unbill/unbill-node/issues"
