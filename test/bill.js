@@ -44,7 +44,7 @@ describe('Bill Tests', function () {
 
   it('should remove a bill', function () {
     return Unbill
-      .removeBill(({
+      .removeBill({
         userId: testUserId,
         companyId: testCompanyId
       })
