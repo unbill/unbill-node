@@ -86,6 +86,8 @@ Unbill.getBillDetails(payload)
 Unbill.getBills(payload)
 // Fix bill hold
 Unbill.fixBillHold(payload)
+// Remove bill
+Unbill.removeBill(payload)
 ```
 
 ### Company

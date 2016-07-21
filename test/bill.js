@@ -41,6 +41,18 @@ describe('Bill Tests', function () {
       })
       .then(expectDetail)
   })
+
+  it('should remove a bill', function () {
+    return Unbill
+      .removeBill(({
+        userId: testUserId,
+        companyId: testCompanyId
+      })
+      .then(function (response) {
+        expect(response.status).to.equal(200)
+      })
+  })
+
 })
 
 function expectDetail (response) {
