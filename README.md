@@ -30,8 +30,7 @@ var Unbill = require('unbill')(unbillKey)
 ### Authenticate a user's bill credentials
 
 ```js
-var Unbill = require('unbill')(unbillKey)))
-}
+var Unbill = require('unbill')(unbillKey)
 
 Unbill.auth({
   userId: userId,
