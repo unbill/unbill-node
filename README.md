@@ -64,7 +64,7 @@ Unbill.auth({
 
 ## API
 
-The module supports all Plaid API endpoints.  For complete information about the API, head over to the [docs](https://unbill.co/docs).
+The module supports all Unbill API endpoints.  For complete information about the API, head over to the [docs](https://unbill.co/docs).
 
 Every function requires a `payload` as specified by the [docs](https://unbill.co/docs) and returns a promise that can be used to access the response of the call.
 
