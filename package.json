@@ -1,6 +1,6 @@
 {
   "name": "unbill",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A node.js client for the Unbill API.",
   "main": "index.js",
   "scripts": {
